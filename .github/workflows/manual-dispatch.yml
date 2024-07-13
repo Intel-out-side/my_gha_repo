@@ -9,6 +9,13 @@ on:
         required: true
         description: a cheeful world
 
+      log-level:
+        type: choice
+        options:
+          - info
+          - warn
+          - error
+
 jobs:
   run:
     runs-on: ubuntu:latest
