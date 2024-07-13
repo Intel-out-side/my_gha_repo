@@ -9,6 +9,7 @@ jobs:
       BRANCH: main
     steps:
       - run: echo "${{ github.actor }}" # workflow executer be printed
+      - run: echo "${{ GITHUB_ACTOR }}"
 
       - uses: actions/checkout@v4
         with:
