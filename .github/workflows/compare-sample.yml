@@ -13,3 +13,7 @@ jobs:
           ENDS_WITH_FUNC: ${{ endsWith('world', 'orld') }}
           FORMAT_FUNC: ${{ format('{0}, {1}', 'hello', 'world') }}
           JOIN_FUNC: ${{ join(github.event.*.html_url, ',') }}
+
+      - run: echo "${CONTEXT}"
+        env:
+          CONTEXT: ${{ toJson(github) }} # githubコンテキストをjson文字列にダンプ
