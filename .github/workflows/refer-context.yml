@@ -8,9 +8,11 @@ jobs:
     env:
       BRANCH: main
       ACTOR: ${{ github.actor }}
+      USERNAME: ${{ vars.USERNAME }}
     steps:
       - run: echo "${{ github.actor }}" # workflow executer be printed
       - run: echo "${ACTOR}"
+      - run: echo "${USERNAME}"
 
       - uses: actions/checkout@v4
         with:
