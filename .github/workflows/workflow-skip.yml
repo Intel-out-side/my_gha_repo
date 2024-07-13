@@ -1,0 +1,12 @@
+name: condition-workflow
+
+on: push
+
+jobs:
+  skip-on-run:
+    if: ${{ github.actor == 'Intel-out-side' }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Hello world"
