@@ -11,5 +11,5 @@ jobs:
 
       - run: exit 1
 
-      - run: "Previous step failed"
+      - run: echo "Previous step failed"
         if: ${{ failure() }}
