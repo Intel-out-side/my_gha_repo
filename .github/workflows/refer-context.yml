@@ -5,5 +5,11 @@ on: push
 jobs:
   print:
     runs-on: ubuntu-latest
+    env:
+      BRANCH: main
     steps:
       - run: echo "${{ github.actor }}" # workflow executer be printed
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }}
