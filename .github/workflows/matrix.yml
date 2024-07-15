@@ -13,4 +13,4 @@ jobs:
 
     steps:
       - run: echo "${RUNNER_OS}"
-        shell: bas
+        shell: bash
