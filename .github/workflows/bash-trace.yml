@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          echo "::group::Show env variables"
+          printenv
+          echo "::endgroup::"
           set -x
           date
           hostname
