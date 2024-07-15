@@ -20,4 +20,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - run: |
-          docker run --rm "${PWD}:${PWD}" -w "${PWD}" rhysd/actionlint:latest
+          docker run --rm "${GITHUB_WORKSPACE}:${GITHUB_WORKSPACE}" -w "${GITHUB_WORKSPACE}" rhysd/actionlint:latest
