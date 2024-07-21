@@ -1,0 +1,16 @@
+name: bash tracing
+
+on:
+  push:
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "::group::Show env variables"
+          printenv
+          echo "::endgroup::"
+          set -x
+          date
+          hostname
